@@ -64,6 +64,10 @@
 \usepackage{url}
 \usepackage{verbatim}
 \usepackage{xcolor}
+% fine itemize lists with vertical lines
+\usepackage{fdsymbol}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 
 %-------------------------
 % Custom variables
@@ -74,8 +78,6 @@
 \newcommand\spaceAfterSubItems{6pt}
 \newcommand\spaceBeforeGDPRStatement{-6pt}
 \newcommand\spaceBetweenEducations{-6pt}
-\newcommand\spaceBetweenItemAndSubItem{-4pt}
-\newcommand\spaceBetweenSubItemAndSubSubItem{-1pt}
 \newcommand\spaceBetweenLinesInEducation{-1pt}
 \newcommand\spaceBetweenLinesInHeading{-12pt}
 \newcommand\spaceBetweenOrdinarySubItems{-2pt}
@@ -83,7 +85,21 @@
 \newcommand\spaceBetweenResumeSebitems{-4pt}
 \newcommand\spaceBetweenSections{-12pt}
 \newcommand\spaceBetweenJobTitleAndDetails{2pt}
+
+\newcommand\spaceBetweenItemAndSubItem{-4pt}
 \newcommand\spaceBetweenSubItemAndItem{-10pt}
+\newcommand\spaceBetweenSubItemAndSubSubItem{-1pt}
+\newcommand\spaceBetweenSubSubItemAndSubItem{-1pt}
+
+\newcommand\spaceAfterTikzPicture{-21pt}
+
+\newcommand{\linkedlist}[1]{
+  \begin{tikzpicture}[remember picture]%
+    \node (#1) [gray, circle, fill, inner sep=2.0pt]{};
+  \end{tikzpicture}
+}
+
+\renewcommand{\labelitemiii}{\(\circ\)}
 
 %-------------------------
 % Custom commands
@@ -133,6 +149,11 @@
 \newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
 \newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
 \newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
 
 %-------------------------
 % Other settings
@@ -231,11 +252,11 @@
 % Note: the only reason why sub-items are used instead of items is that they provide good spacing out-of-the-box
 % A suggestion from Nemchinski (https://www.youtube.com/live/VscDaW81Y-Y?feature=share&t=3017) to remove names of sub-items, like it's clear anyway that C++ is a language and so on
 % A suggestion mentioned in Nemchinski's video (https://www.youtube.com/live/VscDaW81Y-Y?feature=share&t=1219) by Veronica Kosiak is to put the skills on top of the resume to simplify the job of a recruiter cos they first look at the skills to match them with the position description
-\resumeSubItem{Languages}{C\textbf{\footnotesize++}, C, Python}
+\resumeSubItem{Languages}{C\textbf{\footnotesize++}, C, Python, C\#}
 \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras}
-\resumeSubItem{Libraries/Technologies}{NumPy/SciPy, Sklearn, Pandas, \LaTeX, OpenCV, Unity, C\textbf{\footnotesize++} Boost, MapReduce
+\resumeSubItem{Libraries/Technologies}{NumPy/SciPy, Sklearn, Pandas, OpenCV, Unity, C\textbf{\footnotesize++} Boost, MapReduce
 }
-\resumeSubItem{Tools}{Git, Docker, GDB, Valgrind, CMake, Deployment Pipelines (CI/CD), UNIX/Linux, Windows Server, Tizen
+\resumeSubItem{Tools}{Git, Docker, GDB, Valgrind, \LaTeX, CMake, Deployment Pipelines (CI/CD), UNIX/Linux, Windows Server
 }
 
 % Usually sections consist of resume items, but this one consists of resume sub-items
@@ -273,7 +294,7 @@
 \item{
     \textbf{Software Engineer at \href{https://research.samsung.com/srpol}{\color{blue} Samsung Research}}
     \hfill
-    \textDate{Feb 2023 -- present $\cdot$ 2yr 1 mo} \\
+    \textDate{Feb 2023 -- present $\bigcdot$ 2yr 1 mo} \\
     \vspace{\spaceBetweenJobTitleAndDetails}
     \textbf{Visual Display team}
     \hfill
@@ -281,32 +302,42 @@
 }
 \vspace{\spaceBetweenItemAndSubItem}
 \begin{itemize}
-    \item{
-        \href{https://news.samsung.com/global/samsung-electronics-unveils-groundbreaking-glasses-free-odyssey-3d-gaming-monitor-at-gamescom-2024}{\textbf{\color{blue}Glasses-free 3D monitor}} \skill{Python} \skill{Mediapipe} \skill{OpenCV} \skill{Unity}, \skill{C++}, \skill{CMake}
+    \item[\linkedlist{a}] {
+        \href{https://news.samsung.com/global/samsung-electronics-unveils-groundbreaking-glasses-free-odyssey-3d-gaming-monitor-at-gamescom-2024}{\textbf{\color{blue}Glasses-free 3D monitor}} \skill{Python} \skill{OpenCV} \skill{Unity} \skill{C++} \skill{CMake}
+        \vspace{\spaceBetweenSubItemAndSubSubItem}
         \begin{itemize}
-            \item Developed a \textbf{mathematical model} related to human perception of 3D [details are under NDA]
-            \item \textbf{Experimental verification} of the model using \textbf{computer vision} and \textbf{camera computing methods}
+            \item Developed a \textbf{mathematical model} related to human perception of 3D $\{\!$ details are subject to NDA $\!\}$
+            \item \textbf{Experimental verification} of the model using \textbf{computer vision} and \textbf{computational photography}
             \item Developed a proof of concept application in Unity using the model
             \item \textbf{Leading development} in a team of two people, planning tasks
         \end{itemize}
+        \vspace{\spaceBetweenSubSubItemAndSubItem}
     }
     \vspace{\spaceBetweenOrdinarySubItems}
-    \item{
-        \href{https://www.samsung.com/latin_en/support/tv-audio-video/how-to-use-the-sign-language-guide-feature-on-samsung-smart-tv/}{\textbf{\color{blue} Sign Language Avatar}}: an animated helper for deaf people \skill{Tizen} \skill{C\textbf{\footnotesize++}} \skill{GDB} \skill{Valgrind}
+    \item[\linkedlist{b}] {
+        \href{https://www.samsung.com/latin_en/support/tv-audio-video/how-to-use-the-sign-language-guide-feature-on-samsung-smart-tv/}{\textbf{\color{blue} Sign Language Avatar}}: an animated helper for deaf people \skill{C\textbf{\footnotesize++}} \skill{GDB} \skill{Valgrind} \skill{Tizen}
+        \vspace{\spaceBetweenSubItemAndSubSubItem}
         \begin{itemize}
             \item \textbf{Leading development} of the project, \textbf{communicating} needs and priorities with management
             \item Working on \textbf{simplification} of the project architecture
             \item Writing full project documentation for a \textbf{successful ownership transfer}
         \end{itemize}
+        \vspace{\spaceBetweenSubSubItemAndSubItem}
     }
 \end{itemize}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \draw[gray] ($(a)!0.1!(b)$) -- ($(a)!0.9!(b)$);
+\end{tikzpicture}
+
+\vspace{\spaceAfterTikzPicture}
 \vspace{\spaceBetweenSubItemAndItem}
 
 % Software Development Engineer at Amazon
 \item{
     \textbf{Software Development Engineer at \href{https://www.aboutamazon.com/}{\color{blue} Amazon}}
     \hfill
-    \textDate{Aug 2021 -- Aug 2022 $\cdot$ 1yr} \\
+    \textDate{Aug 2021 -- Aug 2022 $\bigcdot$ 1yr} \\
     \vspace{\spaceBetweenJobTitleAndDetails}
     \textbf{Alexa TextToSpeech}
     \skill{C\textbf{\footnotesize++}} \skill{C} \skill{Python} \skill{Deployment Pipelines (CI/CD)}
@@ -324,8 +355,6 @@
         \textbf{Reduced latency} of a homograph disambiguation model by \textbf{56\%}
     }
 \end{itemize}
-\vspace{\spaceBetweenSubItemAndItem}
-\vspace{\additionalSpaceBetweenOneLineItems}
 
 \resumeSubHeadingListEnd
 
@@ -335,7 +364,7 @@
 %----------PROJECTS-BEGIN----------
 % Notes:
 % 1. Think about removing this section
-% 1.1 Sergey Nemchinski in his video (https://youtu.be/2zps16PJA1k?t=707) had doubts about adding projects if a person already has 1 year of experience. Like it's not necessary, but also adds, so maybe not a problem. Most likely now it can be left, but you can remove this section when adding the next job
+% 1.1 Sergey Nemchinski in his video (https://youtu.be/2zps16PJA1k?t=707) had doubts about adding projects if someone already has 1 year of experience. Like it's not necessary, but it also adds, so maybe not a problem. Most likely now it can be left, but you can remove this section when adding the next job
 
 \section{Projects}
 \resumeSubHeadingListStart
