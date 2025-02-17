@@ -86,6 +86,7 @@
 \newcommand\spaceBetweenSections{-12pt}
 \newcommand\spaceBetweenJobTitleAndDetails{2pt}
 
+\newcommand\spaceBeforeSection{-6pt}
 \newcommand\spaceBetweenItemAndSubItem{-4pt}
 \newcommand\spaceBetweenSubItemAndItem{-10pt}
 \newcommand\spaceBetweenSubItemAndSubSubItem{-1pt}
@@ -246,6 +247,9 @@
 % 3.1. Public speaking for example was proposed by Sergey Nemchinki (I don't remember the source), but also he said together with Alisa Yeremenko that one shouldn't list soft skills in a resume cos this is something recruiters find during an interview (source: https://youtu.be/-ghtEmXux5U?t=1118)
 % 4. Maybe the "Technologies/Libraries" item can be split or merged with "Tools" as now the sub-items in those two items are similar
 
+\vspace{\spaceBeforeSection}
+\vspace{12pt} % a necessary space before the first section, for some reason the first section is an exception, and it's not enough to just set a global space before a sectionŚ
+
 \section{Skills}
 \resumeSubHeadingListStart
 
@@ -286,6 +290,8 @@
 % 4. I believe that a short description of the projects would help to make a picture of what the person was doing (proofs: a Nemchinski's video https://youtu.be/jhnsjSCgtu0?t=1309 and I tried to read a resume sent by Yashasvi Singh and I understood that it's easier to read when you understand what the person was doing)
 % 5. A Google recruiter asked me about my responsibilities and my current job, looks like they might be different in different companies
 % 6. If there were many projects in a particular position it can be written like that "many various projects in X area" (the area should be mentioned), source: Nemchinski's video (https://youtu.be/jhnsjSCgtu0?t=4346)
+
+\vspace{\spaceBeforeSection}
 
 \section{Experience}
 \resumeSubHeadingListStart
@@ -366,6 +372,8 @@
 % 1. Think about removing this section
 % 1.1 Sergey Nemchinski in his video (https://youtu.be/2zps16PJA1k?t=707) had doubts about adding projects if someone already has 1 year of experience. Like it's not necessary, but it also adds, so maybe not a problem. Most likely now it can be left, but you can remove this section when adding the next job
 
+\vspace{\spaceBeforeSection}
+
 \section{Projects}
 \resumeSubHeadingListStart
 
@@ -390,6 +398,8 @@
 % Notes:
 % 1. Think about moving it below (that's a usual recommendation for experienced engineers, although I'm not sure it applies to ML engineers)
 % 2. Think about removing the bachelor's degree as you're a master, although these are different universities
+
+\vspace{\spaceBeforeSection}
 
 \section{Education}{}
 \resumeSubHeadingListStart
