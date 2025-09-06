@@ -92,6 +92,8 @@
 \newcommand\spaceBetweenSubItemAndSubSubItem{-1pt}
 \newcommand\spaceBetweenSubSubItemAndSubItem{-1pt}
 
+\newcommand\spaceBeforeTeamsName{-7pt}
+
 \newcommand\spaceAfterTikzPicture{-21pt}
 
 \newcommand{\linkedlist}[1]{
@@ -115,7 +117,7 @@
     }
 }
 
-% Text style for dates (e.g. textit, textbf, textnormal)
+% Text style for dates (e.g., textit, textbf, textnormal)
 \newcommand{\textDate}{\textit}
 
 \newcommand{\resumeSubheading}[4]{
@@ -245,7 +247,7 @@
 \section{Skills}
 \resumeSubHeadingListStart
 
-% Note: the only reason why sub-items are used instead of items is that they provide good spacing out-of-the-box
+% Note: the only reason why sub-items are used instead of items is that they provide good spacing out of the box
 % A suggestion from Nemchinski (https://www.youtube.com/live/VscDaW81Y-Y?feature=share&t=3017) to remove names of sub-items, like it's clear anyway that C++ is a language, and so on
 % A suggestion mentioned in Nemchinski's video (https://www.youtube.com/live/VscDaW81Y-Y?feature=share&t=1219) by Veronica Kosiak is to put the skills on top of the resume to simplify the job of a recruiter, cos they first look at the skills to match them with the position description
 \resumeSubItem{Languages}{C\textbf{\footnotesize++}, C, Python, C\#}
@@ -256,7 +258,7 @@
 }
 
 % Usually, sections consist of resume items, but this one consists of resume sub-items
-% Spaces between sub-items are smaller, so to compensate for this loss of space,e it's added manually
+% Spaces between sub-items are smaller, so to compensate for this loss of space, it's added manually
 \vspace{\spaceAfterSubItems}
 
 \resumeSubHeadingListEnd
@@ -279,7 +281,7 @@
 % 2.2. Sergey Nemchinski's video called Resume analysis (https://youtu.be/J8k5TCa3UYA?t=645)
 % 2.3. Various people say that it's bad to have one resume for all roles, suggesting that if you have multiple resumes, you can remove irrelevant stuff from them
 % 3. Looks like it's ok to have gaps between different work positions (from a video of Sergey Nemchinski and Alexandra Chudinova: https://youtu.be/7aZSO8v58rE?t=6001)
-% 4. I believe that a short description of the projects would help to make a picture of what the person was doing (proofs: a Nemchinski's video https://youtu.be/jhnsjSCgtu0?t=1309 and I tried to read a resume sent by Yashasvi Singh, and I understood that it's easier to read when you understand what the person was doing)
+% 4. I believe that a short description of the projects would help to make a picture of what the person was doing (proofs: Nemchinski's video https://youtu.be/jhnsjSCgtu0?t=1309, and I tried to read a resume sent by Yashasvi Singh, and I understood that it's easier to read when you understand what the person was doing)
 % 5. A Google recruiter asked me about my responsibilities and my current job. It looks like they might be different in different companies
 % 6. If there were many projects in a particular position, it can be written like that "many various projects in X area" (the area should be mentioned), source: Nemchinski's video (https://youtu.be/jhnsjSCgtu0?t=4346)
 
@@ -292,16 +294,30 @@
 \item{
     \textbf{Software Engineer at \href{https://research.samsung.com/srpol}{\color{blue} Samsung Research}}
     \hfill
-    \textDate{Feb 2023 -- present $\bigcdot$ 2yr 5 mo} \\
+    \textDate{Feb 2023 -- present $\bigcdot$ 2yr 7 mo} \\
     \vspace{\spaceBetweenJobTitleAndDetails}
-    \textbf{Visual Display team}
+    \textbf{Language Intelligence team}
     \hfill
     \textDate{Warsaw, Poland} \\
 }
 \vspace{\spaceBetweenItemAndSubItem}
 \begin{itemize}
     \item[\linkedlist{a}] {
-        \href{https://news.samsung.com/global/samsung-electronics-unveils-groundbreaking-glasses-free-odyssey-3d-gaming-monitor-at-gamescom-2024}{\textbf{\color{blue}Glasses-free 3D monitor}} \skill{Python} \skill{OpenCV} \skill{Unity} \skill{C++} \skill{CMake}
+        \textbf{ToDo: add project name and skills} \skill{Python}
+        \vspace{\spaceBetweenSubItemAndSubSubItem}
+        \begin{itemize}
+            \item ToDo: add achievements
+        \end{itemize}
+        \vspace{\spaceBetweenSubSubItemAndSubItem}
+    }
+\end{itemize}
+
+\vspace{\spaceBeforeTeamsName}
+\textbf{Visual Display team} \\
+\vspace{\spaceBetweenItemAndSubItem}
+\begin{itemize}
+    \item[\linkedlist{a}] {
+        \href{https://news.samsung.com/global/samsung-electronics-unveils-groundbreaking-glasses-free-odyssey-3d-gaming-monitor-at-gamescom-2024}{\textbf{\color{blue}Glasses-free 3D display}} \skill{Python} \skill{OpenCV} \skill{Unity} \skill{C++} \skill{CMake}
         \vspace{\spaceBetweenSubItemAndSubSubItem}
         \begin{itemize}
             \item Developed a \textbf{mathematical model} related to human perception of stereoscopy
