@@ -24,6 +24,7 @@ void runge_kutt_4(const double x, const double y, const double h, const int n) {
 //                           y(a) = y0
 // ./main a b n y0
 // stdin, stdout
+
 int main (int argc, char **argv) {
     const double a = atof(argv[1]);
     const double b = atof(argv[2]);
@@ -32,3 +33,4 @@ int main (int argc, char **argv) {
     double y0 = atof(argv[4]);
     runge_kutt_4(a, y0, h, n);
 }
+

@@ -13,7 +13,7 @@ void print_list(list *head) {
 
 char preprocess_symb(char *buf, int &i) {
     char c = *buf;
-    switch(c) {
+    switch (c) {
         case '+':
         case '-':
         case '*':

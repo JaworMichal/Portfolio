@@ -178,7 +178,7 @@ int main(int argv, char *argc[]) {
         printf("If there wasn't any translation typed the word will be added anyway.\n");
         return 0;
     }
-    FILE *fi = fopen("/home/michael/Documents/Programming/Projects/C++/Dictionary/file", "r+");
+    FILE *fi = fopen("/home/michal/Documents/Programming/Projects/C++/Dictionary/file", "r+");
     trie *dictionary = (trie *) calloc(1, sizeof(trie));
     construct_trie(dictionary, fi);
     if (!strcmp(argc[1], "-add")) {
@@ -191,3 +191,4 @@ int main(int argv, char *argc[]) {
     }
     return 0;
 }
+

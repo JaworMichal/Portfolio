@@ -2,8 +2,9 @@
 #include "make_tree.h"
 
 void check_and_delete_tree(tree *&root) {
-    if(root)
+    if(root) {
         delete_tree(root);
+    }
 }
 
 void delete_tree(tree *&root) {

@@ -45,3 +45,4 @@ void write_mistake(char *string, char c);
 void delete_head(list *&head);
 
 void checking_flags(int &test_flag, int argv, char **argc);
+

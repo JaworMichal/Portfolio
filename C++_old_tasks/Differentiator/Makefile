@@ -8,3 +8,4 @@ all: $(OBJECTS)
 	g++ -o $@ -c $<
 clean:
 	rm -rf $(OBJECTS) program
+

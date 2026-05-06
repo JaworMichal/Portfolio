@@ -20,3 +20,4 @@ void add_subtree_in_tree(tree *&root, tree *&node, tree *&subroot);
 void not_lower_priority_case(tree *&root, tree *&node, list *&head, int priority_of_head, int cur_priority, char *possible_symbols);
 
 void lower_priority_case(tree *&root, tree *&node, list *&head, int priority_of_head, int cur_priority, char *possible_symbols);
+

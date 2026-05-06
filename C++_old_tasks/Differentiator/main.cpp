@@ -41,7 +41,7 @@ int main(int argv, const char **argc) {
         print_expression(root);
         if (calc_flag) {
             double result = calculate(root, x0);
-            FILE *output = fopen("/home/michael/ClionProjects/C++/differentiator/output.txt", "w");
+            FILE *output = fopen("/home/michal/ClionProjects/C++/differentiator/output.txt", "w");
             fprintf(output, "%g", result);
             fclose(output);
         }
@@ -51,3 +51,4 @@ int main(int argv, const char **argc) {
     }
     return 0;
 }
+

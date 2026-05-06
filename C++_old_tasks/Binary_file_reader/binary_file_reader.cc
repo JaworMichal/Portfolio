@@ -13,3 +13,4 @@ int main(int argc, const char **argv) {
         read_bytes = fread(buf, sizeof *buf, BLOCK_SIZE, bin);
     }
 }
+

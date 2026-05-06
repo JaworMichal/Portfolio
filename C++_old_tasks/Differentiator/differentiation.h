@@ -22,3 +22,4 @@ tree *x_in_the_power_a_case(tree *node);
 void simplification_of_x_in_the_power_a_case(tree *&subroot, tree *node);
 
 void arc_tangent_case(tree *&subroot, tree *node);
+

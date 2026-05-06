@@ -19,7 +19,6 @@ tree *copy_tree(tree *root) {
 
 // subroot is result of differentiation of sum (it will be created further)
 // node belongs to the tree of expression, it mustn't be changed
-//
 void variable_case(tree *subroot) {
     subroot->data.symb = 0;
     subroot->data.num = 1;
