@@ -84,3 +84,4 @@ class LinearProgramming():
 
     def solve(self):
         return self.optimizer.optimize()
+

@@ -132,3 +132,4 @@ class SimplexMethod():
         res = np.zeros_like(ratings)
         res[variables_permutation[variables_permutation != -1]] = b[(variables_permutation != -1)[:b.size]]
         return res
+
