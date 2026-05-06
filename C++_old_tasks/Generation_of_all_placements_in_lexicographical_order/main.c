@@ -41,3 +41,4 @@ void generate_all_allocations(const int n) {
 int main(void) {
   generate_all_allocations(1);
 }
+

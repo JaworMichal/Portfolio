@@ -40,3 +40,4 @@ int main() {
     }
     std::cout << st.top() << std::endl;
 }
+

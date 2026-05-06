@@ -12,6 +12,5 @@ void settings() {
 
 int main() {
 	settings();
-	;
 	return 0;
 }

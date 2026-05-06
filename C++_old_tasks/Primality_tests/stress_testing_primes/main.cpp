@@ -406,24 +406,24 @@ int Sieve_of_Eratosthenes(long long n) {
 int main() {
     srand ((unsigned int) time(NULL));
     long long n, max_n = 0;
-    for(long long i = 0; i < 1000; i++) {
-        while(1) {
+    for (long long i = 0; i < 1000; i++) {
+        while (1) {
             n = (long long) rand() * (long long) rand();
             n = absolute_value(n) + 1;
-            if(n != 4186306949432302127)
+            if (n != 4186306949432302127)
                 break;
         }
-        if(n > max_n)
+        if (n > max_n)
             max_n = n;
         int res1 = Sieve_of_Eratosthenes(n), res2 = is_prime(n);
-        if(res1 != res2) {
+        if (res1 != res2) {
             cout << "mistake, sieve says ";
-            if(res1)
+            if (res1)
                 cout << "prime";
             else
                 cout << "composite";
             cout << ", but bpsw says ";
-            if(res2)
+            if (res2)
                 cout << "prime";
             else
                 cout << "composite";

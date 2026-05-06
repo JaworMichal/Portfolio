@@ -39,7 +39,7 @@ void f1() {
 
 int main() {
     try {
-	f1();
+        f1();
     } catch(int e) { cout << "exception catched\n"; }
     return 0;
 }

@@ -359,3 +359,4 @@ int main() {
         cout << (is_prime(num) ? "prime\n" : "composite\n");
     return 0;
 }
+

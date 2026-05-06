@@ -405,3 +405,4 @@ int main(int argc, char **argv) {
     std::cout << (res ? "prime\n" : "composite\n");
     return 0;
 }
+

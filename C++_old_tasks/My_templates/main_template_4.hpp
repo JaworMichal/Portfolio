@@ -32,6 +32,5 @@ inline int read_int() {
 }
 
 int main() {
-    ;
     return 0;
 }
